@@ -26,7 +26,7 @@ App = {
   initWeb3: function() {
 
     if(typeof web3 !== 'undefined') {
-      App.web3Provider = web3currentProvider;
+      App.web3Provider = web3.currentProvider;
     } else {
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8454');
     }
@@ -39,7 +39,7 @@ App = {
       let AdoptionArtifact = data;
       App.contracts.Adoption = TruffleContract(AdoptionArtifact);
 
-      App.contracts.Adoption.setProvider(App.web3Provider)l
+      App.contracts.Adoption.setProvider(App.web3Provider);
       return App.markAdopted();
     });
 
@@ -53,7 +53,7 @@ App = {
   markAdopted: function(adopters, account) {
     let adoptionInstance;
 
-    App.contractsAdoption.deployed().then(instance => {
+    App.contracts.Adoption.deployed().then(instance => {
       adoptionInstance = instance;
       return adoptionInstance.getAdopters.call();
     })
@@ -81,9 +81,9 @@ App = {
 
       let account = accounts[0];
 
-      App.contractsAdoption.deployed()
+      App.contracts.Adoption.deployed()
         .then(instance => {
-          adoptionsInstance = instance;
+          adoptionInstance = instance;
           return adoptionInstance.adopt(petId, { from: account });
         })
         .then(result => {
