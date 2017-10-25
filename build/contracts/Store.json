@@ -1,0 +1,58 @@
+{
+  "contract_name": "Store",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addDocument",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getDocumentTime",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60d68061001e6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663582a286381146046578063ce90d4b214605b575b600080fd5b3415605057600080fd5b60596004356080565b005b3415606557600080fd5b606e6004356095565b60405190815260200160405180910390f35b60008181526020819052604090204290555b50565b6000818152602081905260409020545b9190505600a165627a7a723058209f215ab96b9fe39988216f59fa21e55e3dd401e43ddb55ffc80c640c367316790029",
+  "networks": {
+    "1508935500896": {
+      "links": {},
+      "events": {},
+      "updated_at": 1508935563434
+    },
+    "1508935596547": {
+      "events": {},
+      "links": {},
+      "address": "0x6f616919600d757e07720c7387a0baeb3c75af44",
+      "updated_at": 1508935603868
+    },
+    "1508936557356": {
+      "events": {},
+      "links": {},
+      "address": "0x97363dca7c960f2b95f818dbf721f4cab295c4c3",
+      "updated_at": 1508936563943
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1508936563943
+}
